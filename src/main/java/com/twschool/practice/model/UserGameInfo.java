@@ -6,40 +6,24 @@ import java.util.List;
 
 public class UserGameInfo {
 
-    /**
-     * 用户id
-     */
+
     String userId;
 
-    /**
-     * 游戏答案
-     */
+
     String answer;
 
-    /**
-     * 用户本次玩的次数
-     */
+
     Integer count = 0;
 
-    /**
-     * 用户连续正确次数
-     */
+
     Integer continuousRightCount = 0;
 
-    /**
-     * 积分
-     */
+
     Integer integral = 0;
 
-    /**
-     * 额外积分
-     */
+
     Integer extraIntegral = 0;
 
-    /**
-     * 历史积分信息
-     */
-//    List<History> histories = new ArrayList<>(32);
 
     public String getUserId() {
         return userId;
@@ -89,13 +73,6 @@ public class UserGameInfo {
         this.extraIntegral = extraIntegral;
     }
 
-//    public List<History> getHistories() {
-//        return histories;
-//    }
-//
-//    public void setHistories(List<History> histories) {
-//        this.histories = histories;
-//    }
 
     class History {
         Integer totalIntegral = 0;
