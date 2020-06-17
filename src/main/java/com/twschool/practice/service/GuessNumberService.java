@@ -42,7 +42,6 @@ public class GuessNumberService {
 
         String result = this.judge(guess, userGameInfo.getAnswer());
 
-        // 用户猜正确
         if (rightResult.equals(result)){
             int continuousRightCount = userGameInfo.getContinuousRightCount() + 1;
 
@@ -67,11 +66,9 @@ public class GuessNumberService {
             return userGameResponse;
         }
 
-        // 扣分
         userGameInfo.setIntegral(userGameInfo.getIntegral() - 3);
         userGameInfo.setContinuousRightCount(0);
 
-        // 判断用户执行是否超过6次
         userGameInfo.setCount(userGameInfo.getCount() + 1);
 
         if (userGameInfo.getCount() >= 6){
@@ -100,21 +97,16 @@ public class GuessNumberService {
         }
 
         String[] answer = gameAnswer.split(" ");
-        // 值正确，位置不正确
         Set<String> correctNumber = new HashSet<>(4);
-        // 值正确，位置正确
         Set<String> correctNumberAndPosition = new HashSet<>(4);
-
         String[] result = input.split(" ");
 
         for (int j = 0; j < result.length; j++) {
             for (int k = 0; k < answer.length; k++) {
                 if (result[j].equals(answer[k])) {
-                    // 位置相等
                     if (j == k) {
                         correctNumberAndPosition.add(result[j]);
                     } else {
-                        // 只有值相等
                         correctNumber.add(result[j]);
                     }
                 }

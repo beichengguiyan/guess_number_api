@@ -4,9 +4,7 @@ package com.twschool.practice.model;
 public class UserGameInfoDTO {
 
     String userId;
-
     String guess;
-
 
     public String getUserId() {
         return userId;

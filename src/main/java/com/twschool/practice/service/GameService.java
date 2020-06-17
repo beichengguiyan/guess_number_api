@@ -18,8 +18,6 @@ public class GameService {
         return guessNumberGame.guess(userAnswer);
     }
 
-
-
     public void startGame() {
 
     }

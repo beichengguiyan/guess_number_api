@@ -6,24 +6,12 @@ import java.util.List;
 
 public class UserGameInfo {
 
-
     String userId;
-
-
     String answer;
-
-
     Integer count = 0;
-
-
     Integer continuousRightCount = 0;
-
-
     Integer integral = 0;
-
-
     Integer extraIntegral = 0;
-
 
     public String getUserId() {
         return userId;
