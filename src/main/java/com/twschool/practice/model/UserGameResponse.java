@@ -22,29 +22,16 @@ public class UserGameResponse {
         this.message = message;
     }
 
-    public static class Message{
+    public static class Message {
         String result;
 
-        /**
-         * 用户id
-         */
         String userId;
 
-        /**
-         * 用户本次玩的次数
-         */
         Integer count = 0;
 
-        /**
-         * 用户连续正确次数
-         */
         Integer continuousRightCount = 0;
 
-        /**
-         * 总积分
-         */
         Integer integralTotal = 0;
-
 
         String instruction;
 
