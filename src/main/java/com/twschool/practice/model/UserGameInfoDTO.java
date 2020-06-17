@@ -2,14 +2,9 @@ package com.twschool.practice.model;
 
 
 public class UserGameInfoDTO {
-    /**
-     * 用户id
-     */
+
     String userId;
 
-    /**
-     * 用户输入答案
-     */
     String guess;
 
 
